@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>test</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(171, 178, 191); background-color: rgb(40, 44, 52); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(124, 135, 156); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 139, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(124, 135, 156); border-color: rgb(75, 83, 98); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(75, 83, 98); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(75, 83, 98); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(58, 63, 75); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(49, 54, 63); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(75, 83, 98) rgb(75, 83, 98) rgb(62, 68, 81); border-image: initial; background-color: rgb(58, 63, 75); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview ul label { vertical-align: top; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(153, 187, 255, 0.04);
+}
+pre.editor-colors .invisible {
+  color: #abb2bf;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #528bff;
+}
+pre.editor-colors .selection .region {
+  background-color: #3e4451;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #528bff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(171, 178, 191, 0.15);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 139, 255, 0.24);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #528bff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #636d83;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #abb2bf;
+  background-color: #3a3f4b;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #abb2bf;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(224, 82, 82, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #abb2bf;
+}
+.syntax--comment {
+  color: #5c6370;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #5c6370;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #98c379;
+}
+.syntax--keyword {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--control {
+  color: #c678dd;
+}
+.syntax--keyword.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #61afef;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #d19a66;
+}
+.syntax--storage {
+  color: #c678dd;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #c678dd;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #abb2bf;
+}
+.syntax--constant {
+  color: #d19a66;
+}
+.syntax--constant.syntax--variable {
+  color: #d19a66;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--numeric {
+  color: #d19a66;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #56b6c2;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #56b6c2;
+}
+.syntax--variable {
+  color: #e06c75;
+}
+.syntax--variable.syntax--interpolation {
+  color: #be5046;
+}
+.syntax--variable.syntax--parameter {
+  color: #abb2bf;
+}
+.syntax--string {
+  color: #98c379;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #abb2bf;
+}
+.syntax--string.syntax--regexp {
+  color: #56b6c2;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #e5c07b;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e06c75;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #5c6370;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #abb2bf;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #61afef;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #e5c07b;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #be5046;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #abb2bf;
+}
+.syntax--support.syntax--class {
+  color: #e5c07b;
+}
+.syntax--support.syntax--type {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function {
+  color: #56b6c2;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #e5c07b;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #61afef;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e06c75;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #d19a66;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #61afef;
+}
+.syntax--meta.syntax--class {
+  color: #e5c07b;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e06c75;
+}
+.syntax--meta.syntax--link {
+  color: #d19a66;
+}
+.syntax--meta.syntax--require {
+  color: #61afef;
+}
+.syntax--meta.syntax--selector {
+  color: #c678dd;
+}
+.syntax--meta.syntax--separator {
+  color: #abb2bf;
+}
+.syntax--meta.syntax--tag {
+  color: #abb2bf;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #abb2bf;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #523d14 !important;
+  background-color: #e0c285 !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #e05252 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #d19a66;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #c678dd;
+}
+.syntax--markup.syntax--deleted {
+  color: #e06c75;
+}
+.syntax--markup.syntax--italic {
+  color: #c678dd;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e06c75;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #61afef;
+}
+.syntax--markup.syntax--link {
+  color: #56b6c2;
+}
+.syntax--markup.syntax--inserted {
+  color: #98c379;
+}
+.syntax--markup.syntax--quote {
+  color: #d19a66;
+}
+.syntax--markup.syntax--raw {
+  color: #98c379;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #c678dd;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #828997;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #abb2bf;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #61afef;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #c678dd;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #d19a66;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #98c379;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e06c75;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #be5046;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #d19a66;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #e5c07b;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #828997;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #61afef;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #c678dd;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e06c75;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #e5c07b;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #c678dd;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e06c75;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #abb2bf;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #56b6c2;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #c678dd;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e06c75;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #98c379;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e06c75;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #61afef;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #d19a66;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #abb2bf;
+}
+.syntax--ng.syntax--tag {
+  color: #56b6c2;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #e5c07b;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #c678dd;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #abb2bf;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #abb2bf;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #c678dd;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #d19a66;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="-">代码整洁之道</h1>
+<hr>
+<h2 id="-">整洁代码</h2>
+<ul>
+<li><p>Leblanc ： Later equals never.<br>（勒布朗法则：稍后等于永不）</p>
+</li>
+<li><p>对代码的每次修改都影响到其他两三处代码。</p>
+</li>
+<li>修改无小事。</li>
+<li>如同医生不能遵从病人的意愿，程序员遵从不了解混乱风险的经理的意愿，也是不专业的做法。</li>
+<li>赶上期限的唯一方法，做的快的唯一方法，就是始终尽可能保持代码整洁。</li>
+<li><strong>破窗理论</strong>：环境中的不良现象如果被放任存在，会诱使人们仿效，甚至变本加厉。==一幢有少许破窗的建筑为例，如果那些窗不被修理好，可能将会有破坏者破坏更多的窗户。最终他们甚至会闯入建筑内，如果发现无人居住，也许就在那里定居或者纵火。一面墙，如果出现一些涂鸦没有被清洗掉，很快的，墙上就布满了乱七八糟、不堪入目的东西；一条人行道有些许纸屑，不久后就会有更多垃圾，最终人们会视若理所当然地将垃圾顺手丢弃在地上==。这个现象，就是犯罪心理学中的破窗效应。结论：及时矫正和补救正在发生的问题。<strong>启发</strong>：影响的大小并不能改变行为错误的本质，别人的错误更不会是证明你无错的理由。</li>
+<li>整洁的代码只做好一件事：整洁的代码力求集中。每个函数、每个类和每个模块都全神贯注于一事，完全不受四周细节的干扰和污染。</li>
+<li>在意代码。</li>
+<li>简单代码：能通过所有测试；没有重复代码；体现系统中的全部设计理念；包括尽量少的实体，比如类，方法，函数等。</li>
+<li>不要重复代码，只做一件事，表达力，小规模抽象。</li>
+<li>不读周边代码的话就没法写代码。编写代码的难度，取决于读周边代码的难度。</li>
+<li>军规：让营地比你来时更干净。</li>
+<li>练习，练习，练习</li>
+</ul>
+<hr>
+<h2 id="-">有意义的命名</h2>
+<ul>
+<li>名副其实：如果名称需要注释来补充，那就不算是名副其实。</li>
+<li>避免误导：慎用-List；名称区分度要大；避免0,1,l,o,O。</li>
+<li>做有意义的区分：以数字系列命名(a1,a2...aN)纯属误导。废话都是冗余，-Data,-Info等都属于冗余信息。</li>
+<li>使用读得出来的名称</li>
+<li>使用可搜索的名称：名称长短应与其作用域大小相对应。</li>
+<li>避免使用编码：不必包含类型，不必使用前缀/后缀</li>
+<li>避免思维映射：明确是王道。</li>
+<li>类名应该是名词或名词短语</li>
+<li>方法名应该是动词或动词短语（使用方法来初始化对象通常好于直接只用构造器，所以建议将构造器设置为private）</li>
+<li>别扮可爱</li>
+<li>言到意到。意到言到。</li>
+<li>每个概念对应一个词：给每个抽象概念选一个词，并且一以贯之。</li>
+<li>别用双关语：一词一意</li>
+<li>使用解决方案领域名称</li>
+<li>使用源自所涉问题领域的名称：优秀的程序员和设计师，其工作之一就是分离解决方案领域和问题领域的概念。</li>
+<li>增加有意义的语境，如前缀</li>
+<li>不要添加没用的语境：精确正是命名的要点</li>
+<li>取好名字最难的地方在于需要良好的描述技巧和共有文化背景。</li>
+</ul>
+<hr>
+<h2 id="-">函数</h2>
+<ul>
+<li>短小：函数的第一规则。每行都不应该有150个字符那么长，函数也不该有100行那么长。函数的缩进层级不该多于一层。</li>
+<li>只做一件事：如果函数只是做了该函数名下同一抽象层上的步骤，则函数还是只做了一件事。（判断函数是否不止做了一件事，还有就是看是否能再拆出一个函数，该函数不仅只是单纯地重新诠释其实现。只做一件事的函数无法被合理地切分为多个区段。）</li>
+<li>每个函数一个抽象层级：我们想要让代码拥有自顶向下的阅读顺序。让代码读起来像是一系列自顶向下的TO起头段落是保持抽象层级协调一致的有效技巧。</li>
+<li>switch语句：多态--将switch语句埋到抽象工厂底下，不让任何人看大。</li>
+<li>使用描述性名称</li>
+<li>函数参数：参数越少越好，参数越少越便于理解<ul>
+<li>一元函数的普遍形式：函数名称应能区分出来<ol>
+<li>问关于参数的问题，如boolean fileExist("myFile");</li>
+<li>将参数转换为其他什么东西，在输出之：如InputStream fileOpen("myFile");</li>
+<li>事件，有输入参数而无输出参数，程序将函数看做一个事件，使用该参数修改系统状态</li>
+</ol>
+</li>
+<li>标识参数丑陋不堪，即如果标识为true将会这样做，标识为false将会这样做：向函数传入布尔值简直是骇人听闻的做法。</li>
+<li>二元函数：单个值的有序组成部分；可以把某个参数转换成当前类的成员变量，从而无需再传递它。</li>
+<li>三元函数：排序，琢磨，忽略的问题都会加倍体现，写三元函数之前一定要想清楚</li>
+<li>参数列表：一个数量可变的参数等同于一个参数</li>
+<li>函数命名应与参数形成动词/名词对，如writeField(name)</li>
+</ul>
+</li>
+<li>无副作用： 函数承诺只做一件事，但还是会做其他被藏起来的事，例如时序性耦合</li>
+<li>输出参数：面向对象语言中对输出参数的大部分需求已经消失了。应避免使用输出参数，如果函数必须要修改某种状态，就修改所属对象的状态吧。</li>
+<li>分隔指令与询问：函数要么做什么事(do)，要么回答什么事(boolean)，但二者不可兼得。</li>
+<li>使用异常替代返回错误码：<ul>
+<li>使用异常替代错误码返回错误码，错误处理代码就能从主路径代码中分离出来，得到简化；<ol>
+<li>抽离try/catch代码块：try/catch代码块丑陋不堪；最好把try和catch代码块的主体部分抽离出来，另外形成函数。</li>
+<li>错误处理就是一件事：如果try在某个函数中存在，它就该是这个函数的第一个单词，而且在catch/finally代码块后面也不该有其他内容。</li>
+<li>Error.java依赖磁铁：返回错误码通常暗示某处有个类或是枚举定义了所有错误码。使用异常替代错误码，新异常就可以从异常类派生出来，无需重新编译或重新部署。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>别重复自己：重复可能是软件中一切邪恶的根源。</li>
+<li>结构化编程：每个函数、函数中的每个代码块都应该有一个入口，一个出口，遵循这些规则，意味着在每个函数中只该有一个return语句，循环中不能有break或continue语句，而且永永远远不能有任何goto语句。对于小函数，这些规则助益不大，只有在大函数中，这些规则才会有明显的好处。</li>
+<li>如果写出这样的函数：先想什么就写什么，然后再打磨它。</li>
+<li>小结：编程艺术是且一直就是语言设计的艺术。大师级程序员把系统当做故事来讲，而不是当做程序来写。如果你遵循这些规则，函数就会短小，有个好名字，而且被很好地归置。真正的目的在于讲述系统的故事，而你编写的函数必须干净利落的拼装到一起，形成一种精确而清晰的语言，帮助你讲故事。</li>
+</ul>
+<hr>
+<h1 id="-">注释</h1>
+<ul>
+<li>注释不能美化糟糕的代码</li>
+<li>用代码来阐述</li>
+<li>好注释：<ol>
+<li>法律信息：可指向一份标准许可或其他外部文档</li>
+<li>提供信息的注释：</li>
+<li>对意图的解释：</li>
+<li>阐释：</li>
+<li>警示：例如为什么用某种设计模式</li>
+<li>TODO 注释</li>
+<li>放大</li>
+<li>公共API中的doc</li>
+</ol>
+</li>
+<li>坏注释：<ol>
+<li>喃喃自语</li>
+<li>多余注释</li>
+<li>误导性注释</li>
+<li>循轨式注释</li>
+<li>日志式废话</li>
+<li>废话注释：用整理代码的决心替代创造废话的冲动吧</li>
+<li>可怕的废话</li>
+<li>能用函数或变量时就别用注释</li>
+<li>位置标记：///////////////////(少用，只在有价值的地方用)</li>
+<li>括号后面的注释</li>
+<li>归属与命名</li>
+<li>注释掉的代码</li>
+<li>html注释</li>
+<li>非本地信息</li>
+<li>信息过多</li>
+<li>不明显的联系</li>
+<li>函数头</li>
+<li>非公共API中的javadoc</li>
+<li>范例</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h1 id="-">格式</h1>
+<ul>
+<li>格式的目的：代码格式关乎沟通，而沟通是专业开发者的头等大事。</li>
+<li>垂直格式：有可能用大多数为200行、最长500行的单个文件构造出色的系统(Fitness总长约为50000行)。（书中用到K线图）<ul>
+<li>向报纸学习：名称应当简单一目了然，细节应该往下渐次展开，报纸由许多篇文章组成，多数短小精悍。</li>
+<li>概念间垂直方向上的区隔：空白行</li>
+<li>垂直方向上的靠近：</li>
+<li>垂直距离：关系密切的概念应该互相靠近，变量声明应尽可能靠近其使用位置，实体变量应该在类的顶部声明，若某个函数调用了另外一个，就应该把它们放到一起，而且调用者应该尽可能放在被调用者上面，概念相关的代码应该放到一起</li>
+<li>垂直顺序：自上向下，被调用的函数应该放在执行调用的函数下面</li>
+</ul>
+</li>
+<li>横向格式：应尽力保持代码行短小，遵循无需拖动滚动条到右边的原则，保持在80下最好，120最多。<ul>
+<li>水平方向上的区隔与靠近：如=左右的空格字符，运算符号左右的空格</li>
+<li>水平对齐：</li>
+<li>缩进：源文件是一种继承结构，而不是一种大纲结构，要让这种范围式继承结构可见，依赖缩进。</li>
+<li>空范围：</li>
+</ul>
+</li>
+<li>团队规则：遵循团队规则，绝对不要用各种不同的风格来编写源代码</li>
+<li>鲍勃大叔的格式规则：</li>
+</ul>
+<hr>
+<h1 id="-">对象和数据结构</h1>
+<ul>
+<li>数据抽象：隐藏实现关乎抽象，这并不只是用接口和/或赋值器、取值器就万事大吉。要以最好的方式呈现某个对象包含的数据，需要严肃思考。</li>
+<li>数据、对象的反对称性：对象与数据结构之间的二分原理——过程式代码便于在不改动既有数据结构的前提下增加新函数。面向对象代码便于在不改动既有函数的前提下添加新类。过程式代码难以添加新数据结构，因为必须修改所有函数。面向对象代码难以添加新函数，因为必须修改所有类。</li>
+<li>德墨忒尔律：模块不应了解它所操作对象的内部情形。<ul>
+<li>该定律认为，类C的方法f只应该调用以下对象的方法：<ul>
+<li>C</li>
+<li>由f创建的对象</li>
+<li>作为参数传递给f的对象</li>
+<li>由C的实体变量持有的对象</li>
+<li>即方法不应调用由任何函数返回的对象的方法。（拒绝链式调用）</li>
+</ul>
+</li>
+<li>火车失事：拒绝链式调用</li>
+<li>混杂：无论出于怎样的初衷，公共访问器及改值器都把私有变量公开化，诱导外部函数以过程式程序使用数据结构的方式使用这些变量。 这增加了增加新函数的难度，也增加了添加新数据结构的难度。</li>
+<li>隐藏结构</li>
+</ul>
+</li>
+<li>数据传送对象：DTO(Data Transfer Objects):是一个只有公共变量、没有函数的类；Active Record是一种特殊的DTO形式，拥有公共变量的数据结构，通常也会有类似save和find这样的可浏览方法。</li>
+<li>小结：对象暴露行为，隐藏数据。数据结构暴露数据，没有明显的行为。</li>
+</ul>
+<hr>
+<h1 id="-">错误处理</h1>
+<ul>
+<li>错误处理很重要，但如果它搞乱了代码逻辑，就是错误的做法。</li>
+<li>使用异常而非返回错误码：错误码搞乱了调用者代码</li>
+<li>先写try-catch-finally语句:尝试编写强行抛出异常的测试，再往处理器中添加行为，使之满足测试要求。结果就是你要先构造try代码块的事务范围，而且也会帮助你维护好该范围的事务特征。</li>
+<li>使用不可控异常：可控异常的代价就是违反开放/闭合原则<blockquote>
+<p>如果你在方法中抛出可控异常，而catch语句在三个层级之上，你就得在catch语句和抛出异常之间的每个方法签名中声明该异常</p>
+</blockquote>
+</li>
+<li>给出异常发生的环境说明：你抛出的每个异常，都应当提供足够的环境说明，以便判断错误的来源和处所。在java中，你可以从任何异常里得到堆栈踪迹，然而堆栈踪迹却无法告诉你该失败操作的初衷。如果你的应用程序有日志系统，传递足够的信息给catch块，并记录下来。</li>
+<li>依调用者需要定义异常类：</li>
+<li>定义常规流程：业务逻辑和错误处理代码之间就会有良好的间隔；你来处理特例，客户代码就不用应付异常行为了，异常行为被封装到特例对象中。<blockquote>
+<p>特例模式(Special Case Pattern)：创建一个类或配置一个对象，用来处理特例。</p>
+</blockquote>
+</li>
+<li>别返回null值：</li>
+<li>别传递null值：</li>
+<li>小结：将错误处理隔离对待，独立于主要逻辑之外，就能写出强固而整洁的代码</li>
+</ul>
+<hr>
+<h1 id="-">边界</h1>
+<ul>
+<li>保持软件边界整洁</li>
+<li>使用第三方代码：如果你使用类似Map这样的边界接口，就把它保留在类或近亲类中。避免从公共API中返回边界接口，或将边界接口作为参数传递给公共API。（即进一步封装公共API，放置公共API改动时，需要系统做大范围修改）</li>
+<li>浏览和学习边界：</li>
+<li>8.3没有</li>
+<li>学习性测试的好处不只是免费:</li>
+<li>使用尚不存在的代码：编写我们想得到的接口，好处之一是它在我们控制之下。</li>
+<li>整洁的边界：在使用我们控制不了的代码时，必须加倍小心投资，确保未来的修改不至于代价太大。应该避免我们的代码过多地了解第三方代码中的特定信息。依靠你能控制的东西，好过依靠你控制不了的东西，免得日后受他控制。我们通过代码中少数几处引用第三方接口的位置来管理第三方边界；也可以使用ADAPTER模式将我们的接口转换为第三方提供的接口。在边界两边推动内部一致的用法，当第三方代码有改动时，修改点也会更少。</li>
+</ul>
+<hr>
+<h1 id="-">单元测试</h1>
+<ul>
+<li>TDD三定律：<ul>
+<li>在编写不能通过的单元测试前，不可编写生产代码。</li>
+<li>只可编写刚好无法通过的单元测试，不能编译也算不通过。</li>
+<li>只可编写刚好足以通过当前失败测试的生产代码</li>
+</ul>
+</li>
+<li>保持测试整洁：测试代码和生产代码一样重要。</li>
+<li>整洁的测试：构造-&gt;操作-&gt;检验 (Build-&gt;Operate-&gt;check):<blockquote>
+<p>构造测试数据；操作测试数据；检验操作是否得到期望的结果</p>
+</blockquote>
+</li>
+<li>守规矩的开发者将它们的测试代码重构为更简洁和具有表达力的形式。</li>
+<li>双重标准：测试代码应当<strong>简单，精悍，足具表达力</strong>。双重标准指的是在关乎内存或CPU效率的问题。</li>
+<li>每个测试一个断言：每个测试函数都应该有且只有一个断言语句，或者说，单个测试中的断言数量应该最小化，每个测试函数只测试一个概念。</li>
+<li>F.I.R.S.T. : 快速（Fast）, 独立(Independent), 可重复(Repeatable), 自足验证(Self-Validating), 及时(Timely)。<blockquote>
+<p>测试应该够快：测试运行缓慢你就不会想要频繁的运行它；测试应该相互独立；测试应当可在任何环境中重复通过；测试应该有布尔值输出，你不应该查看日志来确认是否通过，不应该手工对比两个不同文本来确认测试是否通过；测试应及时编写：单元测试应该恰好在使其通过的生产代码之前编写。</p>
+</blockquote>
+</li>
+<li>小结：如果你坐视测试腐败，那么代码也会跟着腐坏。</li>
+</ul>
+<hr>
+<h1 id="-">类</h1>
+<ul>
+<li>类的组织：公共静态常量-&gt; 私有静态常量 -&gt; 私有实体变量 -&gt; 最好没有公共变量 -&gt; 公共函数</li>
+<li>对于封装：测试说了算</li>
+<li>类应该短小：类的第一条规则是类应该短小；第二条规则是还要更短小。对于函数，我们通过计算代码行数衡量大小。对于类，我们通过计算权责(Responsibility)来衡量。<ul>
+<li>单一权责原则(SRP)：类或模块应有且只有一条加以修改的理由——类只应有一个权责，只有一条修改的理由。让软件能工作和让软件保持整洁，是两种截然不同的工作；SRP在编程行为中的重要程度等同于在程序中的重要程度。</li>
+<li>每个达到一定规模的系统都会包括大量逻辑和复杂性，管理这种复杂性的首要目标是加以组织，以便开发者知道到哪能找到东西，并且在某个特定时间只需要理解直接有关的复杂性。</li>
+<li>系统应该由许多短小的类而不是少量的巨大类组成。每个类封装一个权责，只有一个修改的原因，并与少数其他类一起协同达成期望的系统行为。</li>
+</ul>
+</li>
+<li>内聚：内聚性高，意味着类中的方法和变量互相依赖、互相结合成一个逻辑整体。</li>
+<li>保持内聚性就会得到许多短小的类：当类失去了内聚性，就拆分它。</li>
+<li>每改动一次，就执行一次，确保程序的行为没有发生变化。</li>
+<li>为了修改而组织：在整洁的系统中，我们对类加以组织，以降低修改的风险。开放-闭合原则(OCP)：类应当对扩展开放，对修改封闭。我们希望将系统打造成在添加或修改特性时尽可能少惹麻烦的架子。在理想的系统中，我们通过扩展系统而非修改现有代码来添加新特性。</li>
+<li>隔离修改：需求会改变，所以代码也会改变。具体类包含实现细节，而抽象类则只呈现概念。可以借助接口和抽象类来隔离这些细节带来的影响。<blockquote>
+<p>部件之间的解耦代表着系统中的元素相互隔离得很好。</p>
+</blockquote>
+</li>
+<li>降低连接度，我们的类就遵循了另一个类设计原则：依赖倒置原则<blockquote>
+<p>依赖倒置原则(Dependency Inversion Principle, DIP):类应当依赖于抽象而不是依赖于具体细节。程序要依赖于抽象接口，不要依赖于具体实现。简单的说就是要求对抽象进行编程，不要对实现进行编程，这样就降低了客户与实现模块间的耦合。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h1 id="-">系统</h1>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain">复杂要人命。它消磨开发者的生命，让产品难以规划、构建和测试。</span></div><div class="line"><span class="syntax--text syntax--plain"><span class="leading-whitespace">    </span>---------------------(Ray Ozzie, 微软公司首席技术官)</span></div></pre><ul>
+<li>如何建造一个城市：整洁的代码帮助我们在较低层的抽象层级上达成这一目标。本章将讨论如何在较高的抽象层级——系统层级——上保持整洁。</li>
+<li>将系统的构造和使用分开：软件系统应将启动过程和启动过程之后的运行时逻辑分离开，在启动过程中构建应用对象，也会存在相互缠结的依赖关系。</li>
+<li>分解main：将构造与使用分开的方法之一是将全部构造过程搬迁到main或被称之为main的模块中，设计系统的其余部分时，假设所有对象都已正确构造和设置。</li>
+<li>工厂：抽象工厂模式让应用自行控制何时创建实体。</li>
+<li>依赖注入，控制反转：分离构造和使用。控制反转将第二权责从对象中拿出来，转移到另一个专注于此的对象中，从而遵循了单一权责原则。<strong><em>什么是依赖注入？</em></strong></li>
+<li><p>扩容：“一开始就做对系统”纯属神话。反之，我们应该只去实现今天的用户故事，然后重构，明天再扩展系统，实现新的用户故事。这就是迭代和增量敏捷的精髓所在。测试驱动开发、重构以及他们打造出的整洁代码，在代码层面保证了这个过程的实现。</p>
+<blockquote>
+<p>软件系统与物理系统可以类比。它们的架构都可以递增式地增长，只要我们持续将关注面恰当地切分。</p>
+<ul>
+<li>横贯式关注面：原则上，你可以从模块、封装的角度推理持久化策略。但在实践上，你却不得不将实现了持久化策略的代码铺展到许多对象中。</li>
+</ul>
+</blockquote>
+<p>  Java中的三个“方面”：</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="syntax--text syntax--plain"><span class="leading-whitespace">  </span>- Java代理：适用于简单的情况，例如在单独的对象或类中包装方法调用。</span></div></pre></li>
+<li>纯JAVA AOP框架：Spring AOP, JBoss AOP</li>
+<li>AspectJ的方面：AspectJ提供了一套用以切分关注面的丰富而强有力的工具。</li>
+<li><p>测试驱动系统架构：通过方面式手段切分关注面的威力不可低估，假使你能用POJO编写应用程序的领域逻辑，在代码层面与架构关注面分离开，就有可能真正地<strong><em>用测试来驱动架构</em></strong>。采用一些新技术，就能将架构按需从简单演化到精细。没必要<strong><em>先做大设计</em></strong>（Big Design Up Front, BDUF）。实际上，BDUF甚至是有害的，它阻碍改进，因为心理上会抵制丢弃既成之事，也因为架构上的方案选择影响到后续的设计思路。</p>
+<blockquote>
+<p>最佳的系统架构由模块化的关注面领域组成，每个关注面均用纯Java(或其他语言)对象实现。不同的领域之间用最不具有侵害性的方面或类方面工具整合起来。这种架构能测试驱动，就像代码一样。</p>
+</blockquote>
+</li>
+<li><p>优化决策：模块化和关注面切分成就了分散化管理和决策。最好是授权给最有资格的人，延迟决策至最后一刻也是好手段，让我们能够基于最有可能的信息作出选择。提前决策是一种预备知识不足的决策。如果决策太早，就会缺少太多客户反馈、关于项目的思考和实施经验。</p>
+<blockquote>
+<p>拥有模块化关注面的POJO系统提供的敏捷能力，允许我们基于最新的知识做出优化的、时机刚好的决策。决策的复杂性也降低了。</p>
+</blockquote>
+</li>
+<li>明确使用添加了可论证价值的标准：有了标准，就更易复用想法和组件、雇用拥有相关经验的人才、封装好点子，以及将组件连接起来。不过，创立标准的过程有时却漫长到行业等不及的程度，有些标准没能与它要服务的采用者的真实需求相结合。</li>
+<li>系统需要领域特定语言：领域特定语言允许所有抽象层级和应用程序中的所有领域，从高级策略到底层细节使用POJO来表达。</li>
+<li>小结：系统应该是整洁的。侵害性架构会湮灭领域逻辑，冲击敏捷能力。在所有的抽象层级上，意图都应该更加清晰可辨。只有在编写POJO并使用类方面的机制来无损地组合其他关注面时，这种事情才会发生。<blockquote>
+<p>无论是设计系统或单独的模块，别忘了使用<strong><em>大概可工作的最简单方案</em></strong>。</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h1 id="-">迭进</h1>
+<ul>
+<li>通过迭进设计达到整洁目的：根据Kent所述的<strong><em>简单设计</em></strong>的四条规则，只要遵循以下规则，设计就能变得“简单”：<ul>
+<li>运行所有测试：设计必须制造出如预期一般工作的系统，这是首要因素。OO的目标是低耦合度，高内聚度。有了测试，就能保证代码和类的整洁，方法就是递增式地重构代码。<strong><em>测试消除了对清理代码就会破坏代码的恐惧</em></strong>。（提高内聚性，降低耦合度，切分关注面，模块化系统关注面，缩小函数和类的尺寸，选用更好的名称...）</li>
+<li>不可重复：重复是拥有良好设计系统的大敌。</li>
+<li>表达力：软件项目的主要成本在于长期维护。作者把代码写的越清晰，其他人花在理解代码上的时间也就越少，从而减少缺陷，缩减维护成本。做到有表达力的最重要的方式是<strong><em>尝试</em></strong>。</li>
+<li>尽可能减少类和方法的数量：运用以上三个规则可能导致过多的类和方法，此条规则优先级最低。尽管使类和函数的数量尽量少是很重要的，但更重要的却是测试、消除重复和表达力。</li>
+</ul>
+</li>
+<li>小结：不会有能替代经验的一套简单实践手段。</li>
+</ul>
+<hr>
+<h1 id="-">并发编程</h1>
+<blockquote>
+<p>对象是过程的抽象。线程是调度的抽象。</p>
+</blockquote>
+<ul>
+<li>为什么要并发：并发是一种解耦策略。它帮助我们把做什么(目的)和何时(时机)做分解开。解耦目的与时机能明显地改进应用程序的吞吐量和结构。应用程序看起来更像是许多台协同工作的计算机，而不是一个大循环。例如Servlet，当有web请求时，servlet就会异步执行，每次Servlet是在自己的小世界中执行，与其他servlet的执行是分离的。<ul>
+<li>并发会在性能和编写额外代码上增加一些开销；</li>
+<li>正确的并发是复杂的，即便对于简单的问题也是如此；</li>
+<li>并发缺陷并非总能重现，所以常被看做偶发事件而忽略，未被当做真的缺陷看待；</li>
+<li>并发常常需要对设计策略的根本性修改。</li>
+</ul>
+</li>
+<li>挑战：需要理解Just-In-Time编译器如何对待生成的字节码，理解Java内存模型认为什么东西具有原子性。</li>
+<li>并发防御原则：<ol>
+<li>单一权责原则(SRP)：方法、类、组件应当只有一个修改的理由。并发设计自身足够复杂到成为修改的理由，所以也该从其他代码中分离出来。<strong><em>建议：分离并发相关代码与其他代码</em></strong><ol>
+<li>并发相关代码有自己的开发、修改和调优生命周期；</li>
+<li>并发相关代码有自己要对付的挑战，和非并发相关代码不同，而且往往更为困难；</li>
+<li>即便没有周边应用程序增加的负担，写的不好的并发代码可能的出错方式数量也已经足具挑战性。</li>
+</ol>
+</li>
+<li>推论：限制数据作用域——采用synchronized关键字在代码中保护一块使用共享对象的<strong><em>临界区</em></strong>。限制临界区的数量很重要。<strong><em>建议：谨记数据封装，严格限制对可能被共享的数据的访问。</em></strong></li>
+<li>推论：使用数据复本：避免共享数据的好方法之一就是一开始就避免共享数据。如果有避免共享数据的简易手段，结果代码就会大大减少导致错误的可能。</li>
+<li>推论：线程应尽可能地独立：让每个线程在自己的世界中存在，不与其他线程共享数据。<strong><em>建议：尝试将数据分解到可被独立线程(可能在不同处理器上)操作的独立子集。</em></strong></li>
+</ol>
+</li>
+<li>了解Java库：<ul>
+<li>使用类库提供的线程安全群集;</li>
+<li>使用executor框架执行无关任务;</li>
+<li>尽可能使用非锁定解决方案;</li>
+<li>有几个类并不是线程安全的。</li>
+<li>线程安全群集：</li>
+</ul>
+</li>
+</ul></body>
+</html>

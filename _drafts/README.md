@@ -1,3 +1,8 @@
+<<<<<<< HEAD:_drafts/README.md
+=======
+﻿## Welcome to GitHub Pages
+
+>>>>>>> 094c946820e758708539d60fd6010a8e9b5bd238:README.md
 
 # 代码整洁之道
 
